@@ -11,22 +11,13 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);    
     
-    // solution 
-    int n; cin >> n;
-    vector<int> arr(n,0);
+    // solution     
+	int n; cin >> n;
+    sum = 0;
     for(int i = 0; i < n-1;i++)
     {
         int tmp; cin >> tmp;
-        arr[tmp-1] = 1;
+        sum += tmp;
     }
- 
-    for(int i = 0; i < n;i++)
-    {
-        if(arr[i] == 0)  
-        {
-            cout << i+1; 
-            break; 
-        }
-    }
-    
+    cout << n *(n + 1)/2 - sum;
 }
